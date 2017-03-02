@@ -15,7 +15,6 @@
  *
  *  @param directoryPath 文件夹路径
  *
- *  @return 返回文件夹尺寸
  */
 + (void)getFileSize:(NSString *)directoryPath completion:(void(^)(NSInteger))completion;
 

@@ -33,7 +33,6 @@
  */
 + (NSString *)getDeviceName {
     // 需要#import "sys/utsname.h"
-#warning 题主呕心沥血总结！！最全面！亲测！全网独此一份！！
     struct utsname systemInfo;
     uname(&systemInfo);
     NSString *deviceString = [NSString stringWithCString:systemInfo.machine encoding:NSUTF8StringEncoding];
@@ -98,7 +97,6 @@
     
     if ([deviceString isEqualToString:@"i386"])         return @"Simulator";
     if ([deviceString isEqualToString:@"x86_64"])       return @"Simulator";
-    
     return deviceString;
 }
 
@@ -197,7 +195,6 @@
     }
     close(sockfd);
     NSString *deviceIP = @"";
-    
     for (int i=0; i < ips.count; i++) {
         if (ips.count > 0) {
             deviceIP = [NSString stringWithFormat:@"%@",ips.lastObject];
